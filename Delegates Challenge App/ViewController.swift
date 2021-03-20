@@ -7,30 +7,29 @@
 
 import UIKit
 
-class ViewController: UIViewController {
-
+class ViewController: UIViewController, UITextFieldDelegate {
+    
+    // MARK: Properties
+    let zipCodeDelegate = ZipCodeTextFieldDelegate()
+    let cashDelegate = CashTextFieldDelegate()
+    
+    // MARK: Outlets
     @IBOutlet weak var zipTextField: UITextField!
     @IBOutlet weak var dollarTextField: UITextField!
     @IBOutlet weak var lockableTextField: UITextField!
+    @IBOutlet weak var editingSwitch: UISwitch!
     
-    
-    
+    // MARK: Life Cycle
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
-    }
-    
-    func setUpTextField(){
-        
-    }
-    
-    
-    
-//    func dollarField(amount : Double) -> String {
-//        let formatter = NumberFormatter()
-//        formatter.numberStyle = .currency
-//
-//    }
 
+        self.zipTextField.delegate = self.zipCodeDelegate
+        self.dollarTextField.delegate =  self.cashDelegate
+    }
+    
+    
+    
+    
 }
 

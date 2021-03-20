@@ -8,7 +8,7 @@
 import Foundation
 import UIKit
 
-class ZipCodeTextFieldCharacteristic : NSObject, UITextFieldDelegate {
+class ZipCodeTextFieldDelegate : NSObject, UITextFieldDelegate {
     
     func textField(_ textField: UITextField, shouldChangeCharactersIn range: NSRange, replacementString string: String) -> Bool {
         var newtext = textField.text! as NSString

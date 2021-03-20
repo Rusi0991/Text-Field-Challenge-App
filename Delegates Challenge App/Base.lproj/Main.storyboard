@@ -44,6 +44,7 @@
                     </view>
                     <connections>
                         <outlet property="dollarTextField" destination="Yaw-4i-j9V" id="75d-gr-dlC"/>
+                        <outlet property="editingSwitch" destination="Vyo-7Q-RZ2" id="u5p-6G-hXg"/>
                         <outlet property="lockableTextField" destination="3NZ-Ka-eoW" id="D5R-bW-Yj0"/>
                         <outlet property="zipTextField" destination="n14-GX-rtu" id="xMH-GU-kuO"/>
                     </connections>
