@@ -10,6 +10,7 @@ import UIKit
 
 
 // MARK: - CashTextFieldDelegate: NSObject, UITextFieldDelegate
+
 class CashTextFieldDelegate : NSObject, UITextFieldDelegate {
     func textField(_ textField: UITextField, shouldChangeCharactersIn range: NSRange, replacementString string: String) -> Bool {
         var oldText = textField.text! as NSString

@@ -26,10 +26,25 @@ class ViewController: UIViewController, UITextFieldDelegate {
 
         self.zipTextField.delegate = self.zipCodeDelegate
         self.dollarTextField.delegate =  self.cashDelegate
+        lockableTextField.delegate = self
+    }
+    // MARK: Text Field Delegate
+    
+    func textFieldShouldBeginEditing(_ textField: UITextField) -> Bool {
+        return editingSwitch.isOn
+    }
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        textField.resignFirstResponder()
+        return true
     }
     
-    
-    
+    // MARK: Actions
+    @IBAction func toggleTheTextEditor(_ sender: Any) {
+        if !(sender as! UISwitch).isOn {
+            lockableTextField.resignFirstResponder()
+        }
+        
+    }
     
 }
 
